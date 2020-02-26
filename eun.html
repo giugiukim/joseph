@@ -50,38 +50,37 @@ ol{
 
 </head>
 <body>
-  <SCRIPT LANGUAGE="JavaScript">
+  <script  language="Javascript">
 <!--
-function password()
-{
-var count = 0;
+var goodURL  = "#"  //이곳에 인증이 되었을때 이동할 페이지  입력
+    alert("패스워드를 입력하셔야 합니다.")
 
-// 패스워드를 입력받는 상자를 띄워줌
-var pass = prompt('패스워드를 입력하세요','');
+var password =  prompt("PASSWD 입력","")
 
-while(count <=2 )
-{
-if (pass == "0726")
-{ alert('어서 오세요!');
-location.href="https://dmitlee.github.io/web1/index2.html";
-break;
+    if (password == null)  {
+        alert("출입금지")
+        location  = "http://www.naver.com"         // 실패시 이동 주소       history.back();를 넣어도 됨
+    }
+    else  {
+        var  combo =  password
+        var  total =  combo.toLowerCase()
+
+    if  (total == "0726")  {                // 비밀번호
+        alert("웅!어서왕~!! 은주야^^*. 너일줄 알아썽!^^*.")
+        location  =  goodURL
+    }
+    else  {
+        alert("출입금지")
+        location  = "http://www.naver.com"    // 실패시 이동 주소      history.back();를 넣어도 됨
+    }
+    if(count == 3)
+    {
+    alert('자꾸 접근하려 하면 혼납니다!');
+    location.href="http://www.naver.com";
+    }
 }
-else count+=1;
-
-var pass = prompt('당신은 허가된 사용자가 아닙니다. 다시 입력해 주세요.','');
-}
-
-if(count == 3)
-{
-alert('자꾸 접근하려 하면 혼납니다!');
-location.href="이곳에는 접속불가시 이동할 주소나 등록사이트 주소를 적으세요.";
-}
-}
-
-document.write(password());
-
 //-->
-</SCRIPT>
+</script>
   <h1><a href="index2.html">web</a></h1>
   <input type="button" value="나 사랑해?" onclick="alert('웅웅!')">
   <input type ="button" value="night" onclick="
